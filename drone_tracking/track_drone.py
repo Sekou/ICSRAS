@@ -1,3 +1,4 @@
+#multi-stage visual tracking, S. Diane, 2025
 import cv2, os, numpy as np
 
 def load_images_from_folder(folder):
@@ -95,3 +96,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
