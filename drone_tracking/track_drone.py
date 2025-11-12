@@ -46,7 +46,7 @@ def main():
 
     while True:
         ind=(ind+1)%len(imgs)
-        frame = imgs[ind].copy()
+        frame = imgs[ind].copy() #imitating video frames
 
         if ind>0:
             prev_frame=imgs[ind-1].copy()
@@ -96,4 +96,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
