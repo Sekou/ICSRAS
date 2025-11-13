@@ -1,12 +1,8 @@
 #multi-stage visual tracking, S. Diane, 2025
 import cv2, os, numpy as np
 
-def load_images_from_folder(folder):
-    images = []
-    for filename in os.listdir(folder):
-        img = cv2.imread(os.path.join(folder,filename))
-        if img is not None: images.append(img)
-    return images
+def load_images_from_folder(dir):
+    return list(filter(lambda v: v is not None, [cv2.imread(os.path.join(dir,f)) for f in os.listdir(dir)]))
 
 boxes=dict()
 boxes[0]=[240,210,230,160] #вручную указываем начальную детекцию дрона для первого кадра
@@ -96,5 +92,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
