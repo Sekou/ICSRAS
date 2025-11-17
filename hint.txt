@@ -1,0 +1,10 @@
+0: bottle
+1: base
+2: human
+3: car
+4: cndtnr
+5: stairs
+6: strtlght
+7: drone
+8: motor
+9: chair
