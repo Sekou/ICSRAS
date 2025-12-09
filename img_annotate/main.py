@@ -51,8 +51,8 @@ def load_image(file_name):
 def get_label_name(im_name):
     im_name_=im_name.replace("\\", "/")
     a, b=FOLDER_IMAGES, FOLDER_LABELS
-    i=im_name_.rfind(a)
-    dir, name = im_name_[:i] + b, im_name_[i + len(a):]
+    i=im_name_.rfind("/")
+    dir, name = im_name_[:i] +"/"+ b, im_name_[i + 1:]
     lb_name = dir + re.sub("(\.jpg|\.jpeg|\.png)", ".txt", name)
     return lb_name
 
@@ -260,3 +260,4 @@ def main():
 
 
 if __name__ == "__main__": main()
+
